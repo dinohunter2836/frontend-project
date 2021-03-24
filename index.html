@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Music</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<header id="header">
+    <nav id="navbar">
+        <a href="#recently_listened">Recently Listened</a>
+        <a href="#playlists">Your Playlists</a>
+        <a href="#albums">Albums</a>
+        <a href="#artists">Followed artists</a>
+        <a href="#recommended_playlists">Recommended playlists</a>
+        <a href="#recommended_artists">Artists you might like</a>
+    </nav>
+    <form id="search_bar" class="example" style="margin:auto;max-width:300px">
+        <input id="search_input" type="search" placeholder="Search..">
+        <button id="search_button" type="submit">Search</button>
+    </form>
+</header>
+
+<main>
+    <article id="recently_listened">
+        <h1 id="recently_listened_head">Recently listened</h1>
+        <ul>
+            <li>
+                <img src="covers/ATS_cover.jpg"/>
+                <div>
+                    <p>Catalyst</p>
+                    <p>Linkin Park</p>
+                </div>
+            </li>
+            <li>
+                <img src="covers/HT_cover.jpg"/>
+                <div>
+                    <p>In The End</p>
+                    <p>Linkin Park</p>
+                </div>
+            </li>
+            
+            <li>
+                <img src="covers/Meteora_cover.jpg"/>
+                <div>
+                    <p>Numb</p>
+                    <p>Linkin Park</p>
+                </div>
+            </li>
+            <li>
+                <img src="covers/we_are_not_your_kind.png"/>
+                <div>
+                    <p>Solway Firth</p>
+                    <p>Slipknot</p>
+                </div>
+            </li>
+        </ul>
+    </article>
+
+    <article id="playlists">
+        <h1 id="playlists_head">Your Playlists</h1>
+    </article>
+
+    <article id="albums">
+        <h1 id="albums_head">Albums</h1>
+        <ul>
+            <li>
+                <figure>
+                    <img src="covers/HT_cover.jpg"/>
+                    <figcaption>Hybrid Theory</figcaption>
+                    <figcaption>Linkin park</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="covers/Meteora_cover.jpg"/>
+                    <figcaption>Meteora</figcaption>
+                    <figcaption>Linkin park</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="covers/we_are_not_your_kind.png"/>
+                    <figcaption>We Are Not Your Kind</figcaption>
+                    <figcaption>Slipknot</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </article>
+
+    <article id="artists">
+        <h1 id="artists_head">Followed artists</h1>
+        <ul>
+            <li>
+                <figure>
+                    <img src="artists/linkin_park.jpg">
+                    <figcaption>Linkin Park</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="artists/slipknot.jpg">
+                    <figcaption>Slipknot</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </article>
+
+    <section>
+        <h1 id="recommended_head">Recommended for you</h1>
+        <article id="recommended_playlists">
+            <h2 id="recommended_playlists_head">Recommended playlists</h2>
+            <ul>
+                <li>
+
+                </li>
+            </ul>
+        </article>
+        <article id="recommended_artists">
+            <h2 id="recommended_artists_head">Recommended artists</h2>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="artists/green_day.jpg"/>
+                        <figcaption>Green Day</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </article>
+    </section>
+</main>
+
+<footer id="footer">
+    <section id="song_display">
+        <figure id="song_info">
+            <img src="covers/Meteora_cover.jpg"/>
+            <div id="playing_song_info">
+                <p>Faint</p>
+                <p>Linkin Park</p>
+            </div>
+        </figure>
+        <div id="controls">
+            <img src="images/prev_button.png"/>
+            <img src="images/play_button.png"/>
+            <img src="images/next_button.png"/>
+        </div>
+    </section>
+</footer>
+
+</body>
+</html>
