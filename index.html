@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
     <title>Music</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
@@ -16,9 +16,9 @@
         <a href="#recommended_playlists">Recommended playlists</a>
         <a href="#recommended_artists">Artists you might like</a>
     </nav>
-    <form id="search_bar" class="example" style="margin:auto;max-width:300px">
-        <input id="search_input" type="search" placeholder="Search..">
-        <button id="search_button" type="submit">Search</button>
+    <form id="search_bar">
+        <input id="search_input" type="search" placeholder="Search.."/>
+        <input id="search_button" type="image" src="images/search_button.png"  alt="error"/>
     </form>
 </header>
 
@@ -27,14 +27,14 @@
         <h1 id="recently_listened_head">Recently listened</h1>
         <ul>
             <li>
-                <img src="covers/ATS_cover.jpg"/>
+                <img src="covers/ATS_cover.jpg" alt="error"/>
                 <div>
                     <p>Catalyst</p>
                     <p>Linkin Park</p>
                 </div>
             </li>
             <li>
-                <img src="covers/HT_cover.jpg"/>
+                <img src="covers/HT_cover.jpg" alt="error"/>
                 <div>
                     <p>In The End</p>
                     <p>Linkin Park</p>
@@ -42,14 +42,14 @@
             </li>
             
             <li>
-                <img src="covers/Meteora_cover.jpg"/>
+                <img src="covers/Meteora_cover.jpg" alt="error"/>
                 <div>
                     <p>Numb</p>
                     <p>Linkin Park</p>
                 </div>
             </li>
             <li>
-                <img src="covers/we_are_not_your_kind.png"/>
+                <img src="covers/we_are_not_your_kind.png" alt="error"/>
                 <div>
                     <p>Solway Firth</p>
                     <p>Slipknot</p>
@@ -66,25 +66,25 @@
         <h1 id="albums_head">Albums</h1>
         <ul>
             <li>
-                <figure>
-                    <img src="covers/HT_cover.jpg"/>
-                    <figcaption>Hybrid Theory</figcaption>
-                    <figcaption>Linkin park</figcaption>
-                </figure>
+                <div>
+                    <img src="covers/HT_cover.jpg" alt="error"/>
+                    <p>Hybrid Theory</p>
+                    <p>Linkin park</p>
+                </div>
             </li>
             <li>
-                <figure>
-                    <img src="covers/Meteora_cover.jpg"/>
-                    <figcaption>Meteora</figcaption>
-                    <figcaption>Linkin park</figcaption>
-                </figure>
+                <div>
+                    <img src="covers/Meteora_cover.jpg" alt="error"/>
+                    <p>Meteora</p>
+                    <p>Linkin park</p>
+                </div>
             </li>
             <li>
-                <figure>
-                    <img src="covers/we_are_not_your_kind.png"/>
-                    <figcaption>We Are Not Your Kind</figcaption>
-                    <figcaption>Slipknot</figcaption>
-                </figure>
+                <div>
+                    <img src="covers/we_are_not_your_kind.png" alt="error"/>
+                    <p>We Are Not Your Kind</p>
+                    <p>Slipknot</p>
+                </div>
             </li>
         </ul>
     </article>
@@ -94,20 +94,20 @@
         <ul>
             <li>
                 <figure>
-                    <img src="artists/linkin_park.jpg">
+                    <img src="artists/linkin_park.jpg" alt="error">
                     <figcaption>Linkin Park</figcaption>
                 </figure>
             </li>
             <li>
                 <figure>
-                    <img src="artists/slipknot.jpg">
+                    <img src="artists/slipknot.jpg" alt="error">
                     <figcaption>Slipknot</figcaption>
                 </figure>
             </li>
         </ul>
     </article>
 
-    <section>
+    <section id="recommended">
         <h1 id="recommended_head">Recommended for you</h1>
         <article id="recommended_playlists">
             <h2 id="recommended_playlists_head">Recommended playlists</h2>
@@ -132,21 +132,35 @@
 </main>
 
 <footer id="footer">
-    <section id="song_display">
-        <figure id="song_info">
-            <img src="covers/Meteora_cover.jpg"/>
-            <div id="playing_song_info">
-                <p>Faint</p>
-                <p>Linkin Park</p>
-            </div>
-        </figure>
-        <div id="controls">
-            <img src="images/prev_button.png"/>
-            <img src="images/play_button.png"/>
-            <img src="images/next_button.png"/>
+    <div id="song_display">
+        <div>
+            <figure id="song_info">
+                <img src="covers/Meteora_cover.jpg" alt="error"/>
+                <div id="playing_song_info">
+                    <p>Faint</p>
+                    <p>Linkin Park</p>
+                </div>
+            </figure>
         </div>
-    </section>
+        <div id="controls">
+            <div>
+                <input id="prev_button" type="image" src="images/prev_button.png" alt="error"/>
+                <input id="play_button" type="image" src="images/play_button.png" alt="error"/>
+                <input id="next_button" type="image" src="images/next_button.png" alt="error"/>
+            </div>
+            <input type="range" min="0" max="100" step="1" id="progressbar">
+        </div>
+        <div>
+            <input type="range" min="0" max="100" value="50" step="1" id="volume">
+        </div>
+    </div>
 </footer>
+
+<audio id="musicplayer">
+    <source id="audiosource" src=""/>
+</audio>
+<script src="scripts/player.js"></script>
+<script src="scripts/getSources.js"></script>
 
 </body>
 </html>
